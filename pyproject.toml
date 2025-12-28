@@ -1,0 +1,40 @@
+[project]
+name = "openconnect-sso"
+version = "0.9.0"
+description = "Wrapper script for OpenConnect supporting Azure AD (SAMLv2) authentication to Cisco SSL-VPNs"
+license = { file = "LICENSE" }
+readme = "README.md"
+homepage = "https://github.com/ncrypt4nix/openconnect-sso"
+repository = "https://github.com/ncrypt4nix/openconnect-sso"
+dependencies = [
+    "attrs>=25.4.0",
+    "colorama>=0.4.6",
+    "keyring>=25.7.0",
+    "lxml>=6.0.2",
+    "prompt-toolkit>=3.0.52",
+    "pyotp>=2.9.0",
+    "pyqt6>=6.10.1",
+    "pyqt6-webengine>=6.10.0",
+    "pysocks>=1.7.1",
+    "pyxdg>=0.28",
+    "requests>=2.32.5",
+    "structlog>=25.5.0",
+]
+
+[[authors]]
+name = "László Vaskó"
+email = "laszlo.vasko@outlook.com"
+
+[[authors]]
+name = "Alexander Skalkovich"
+email = "ncrypt4nix@yandex.ru"
+
+requires-python = ">=3.13"
+dependencies = []
+
+[project.scripts]
+openconnect-sso = "openconnect_sso.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
